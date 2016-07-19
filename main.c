@@ -1,5 +1,5 @@
 
-// MT, 2015oct23
+// MT, 2016jul19
 
 //NDEBUG
 
@@ -9,7 +9,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "Sha1.h"
+#include "Fnv1a.h"
 
 #include "Sys.h"
 
@@ -19,7 +19,7 @@ int main(int const argc, char * const argv[])
     {
 		Sys_log_line(true, true, "Starting algorithm..");
 
-        char const * const str = Sha1_create_string_from_path(argv[1]);
+        char const * const str = Fnv1a_create_string_from_path(argv[1]);
 
         Sys_log_line(true, true, "Algorithm done.");
 		printf("\n");
