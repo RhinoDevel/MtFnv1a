@@ -1,4 +1,4 @@
-# MT, 2016apr02
+# MT, 2016jul19
 
 # Original source: http://mrbook.org/blog/tutorials/make/
 
@@ -7,13 +7,13 @@ CC=gcc
 CFLAGS=-c -g -std=gnu11 -Wall
 #LDFLAGS=
 LDFLAGS=-g
-SOURCES=main.c Sys.c Sha1.c
+SOURCES=main.c Sys.c Fnv1a.c
 OBJECTS=$(SOURCES:.c=.o)
-EXECUTABLE=mtsha1
+EXECUTABLE=mtfnv1a
 
 all: $(SOURCES) $(EXECUTABLE)
 
-$(EXECUTABLE): $(OBJECTS) 
+$(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
 
 .c.o:
