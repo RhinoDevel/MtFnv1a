@@ -17,13 +17,13 @@ int main(int const argc, char * const argv[])
 {
     if(argc>1)
     {
-		Sys_log_line(true, true, "Starting algorithm..");
+        Sys_log_line(true, true, "Starting algorithm..");
 
         char const * const str = Fnv1a_create_string_from_path(argv[1]);
 
         Sys_log_line(true, true, "Algorithm done.");
-		printf("\n");
 
+        printf("\n");
         if(str!=NULL)
         {
             printf("%s\n", str);
